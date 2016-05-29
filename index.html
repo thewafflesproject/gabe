@@ -9,10 +9,14 @@
         background: url(pawprints.gif) repeat;
         background-color: yellow;
         font-size: 2em;
+        font-size: 1.5em;
+        animation-name: scroll;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
       }
-      .blink { 
+      .blink {
         text-align: center;
-        color: yellow;
         animation-name: blink;
         animation-duration: 1s;
         animation-timing-function: step-start;
@@ -20,15 +24,25 @@
       }
       #main {
         background-color: black;
+        color: yellow;
       }
       p {
         text-align: center;
-        color: yellow;
+      }
+      code {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: blue;
       }
       @keyframes blink {
         0% { opacity: 1.0; }
         50% { opacity: 0.0; }
         100% { opacity: 1.0; }
+      }
+      @keyframes scroll {
+        0% { background-position-x: 0px; }
+        100% { background-position-x: 400px; }
       }
     </style>
   </head>
@@ -36,6 +50,10 @@
     <div id="main">
       <h1 class="blink">Gabe</h1>
       <p>Introducing the new Gabe language. One bit at a time.</p>
+      <p>
+        To install, simply use curl:
+        <code class="blink"><pre>$ curl http://devnull-as-a-service.com/dev/null | sh</pre></code>
+      </p>
     </div>
   </body>
 </html>
