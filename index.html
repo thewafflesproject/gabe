@@ -2,10 +2,40 @@
 <html>
   <head>
     <title>The Gabe Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 100px;
+        background: url(pawprints.gif) repeat;
+        background-color: yellow;
+        font-size: 2em;
+      }
+      .blink { 
+        text-align: center;
+        color: yellow;
+        animation-name: blink;
+        animation-duration: 1s;
+        animation-timing-function: step-start;
+        animation-iteration-count: infinite;
+      }
+      #main {
+        background-color: black;
+      }
+      p {
+        text-align: center;
+        color: yellow;
+      }
+      @keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+      }
+    </style>
   </head>
   <body>
-    <h1>Introducing the new Gabe language. One bit at a time.</h1>
+    <div id="main">
+      <h1 class="blink">Gabe</h1>
+      <p>Introducing the new Gabe language. One bit at a time.</p>
+    </div>
   </body>
 </html>
